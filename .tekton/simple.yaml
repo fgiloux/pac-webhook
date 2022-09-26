@@ -49,7 +49,7 @@ spec:
                printf 'log line 2\n'
                printf ' log line3\n'
                printf 'no more logs\n'
-               RESULT=$(cat success.txt);
+               RESULT=$(cat $(workspaces.source.path)/success.txt);
                exit $([ $RESULT == "true" ])
           workspaces:
             - name: source
